@@ -1,0 +1,85 @@
+html {
+  min-height: 100%;
+}
+
+body {
+  background: linear-gradient(to right bottom, #3f5f25, #406834);    
+  font-family: 'JetBrains Mono', monospace;
+}
+
+img {
+  max-width: 30%;
+  margin-top: 10px;
+  border: 1px solid black;
+   border-radius: 5px;
+}
+
+.modal-backdrop {
+  opacity: 0.5;
+}
+
+.title {
+  margin-top: 0.4em;
+  text-align: center;
+  font-size: 55px;
+  text-shadow:2px 2px aliceblue;
+  font-weight: 900;
+}
+
+.game {
+  margin-top: 20px;
+}
+
+.leftSide{
+  background-color: rgba(255, 255, 255,0.7);
+  width: 400px;
+  border-radius: 15px 0 0 15px;
+  height: 27em;
+}
+
+.rightSide{
+  background-color: rgba(255,255,255,0.3);
+  width: 400px;
+  border-radius: 0 15px 15px 0;
+}
+
+.points {
+  font-size: 25px;
+  text-align: right;
+  padding-right: 20px;
+  min-height: 30%;
+}
+
+#count {
+  margin-left: 10px;
+}
+
+.playerCards > img {
+  min-width: 20%;
+  margin-left: -15px;
+}
+#playedCards1, #playedCards2 {
+   min-height:100px;
+}
+button {
+  margin: 5px 10px  !important;
+  border-radius: 4px !important;
+  background-color: #dd7575;
+  border: 1px solid #dd7575;
+  padding: 5px 10px;
+  border: 2px solid transparent;
+  transition: transform 0.04s ease-out;
+}
+
+button:hover {
+  transform: scale(1.1);
+  border: 2px solid #139c2a;
+}
+
+button:active {
+  transform: scale(1.2);
+}
+
+footer{
+  font-family: 'Abel', sans-serif;
+}
