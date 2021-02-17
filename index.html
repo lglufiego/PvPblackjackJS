@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet"> 
+    <title>BlackjackJS</title>
+  </head>
+  <body>
+  	
+    <div id="modalBackdrop" class=""></div>
+
+    
+    <div id="modalBox" class="modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Game Ended!</h5>
+            <button type="button" onclick="closeModal()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p id="modalMsg"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="closeModal()">Close</button>
+            <button type="button" class="btn btn-danger" onclick="restartGame()">Restart</button>
+          </div>
+        </div>
+      </div>
+  	</div>
+
+    
+
+    <!-- MODAL ACIMA -->
+
+  	<section class="center container">
+    	<div class="title">BlackjackJS</div>
+           
+    	<div class="game container d-flex justify-content-center">
+   
+<!-- left side -->
+        
+    		<div class="leftSide">
+          <!-- carta -->
+    			<div class="d-flex justify-content-center">
+      			<img id="player1card" src="https://imgur.com/3JKxK78.png"/>
+      		</div>
+					<!-- counter -->
+      		<div class="points d-flex align-items-end justify-content-end">
+      			COUNT: <span id="count1">0</span>
+      		</div>
+          
+          <!--div bottom -->
+          
+          <div class=""> 
+          
+            <div id="playedCards1" class="playerCards">
+              
+  
+              
+            </div>
+            
+            <div class="buttons d-flex justify-content-end align-items-center">
+              <button id="hit1" onclick="hit('player1')">Hit</button>
+              <button id="stop1" onclick="stop('player1')">Stop</button>
+            </div>
+            
+          </div>
+
+      	</div>
+
+<!-- right side -->
+        
+        <div class="rightSide">
+          <!-- carta -->
+    			<div class="d-flex justify-content-center">
+            <img id="player2card" src="https://imgur.com/3JKxK78.png"/>
+      		</div>
+					<!-- counter -->
+      		<div class="points d-flex align-items-end justify-content-end">
+      			COUNT: <span id="count2">0</span>
+      		</div>
+          
+          <!--div bottom -->
+          
+          <div class=""> 
+
+            <div id="playedCards2" class="playerCards">
+            </div>
+            
+            <div class="buttons d-flex justify-content-end align-items-center">
+              <button id="hit2" onclick="hit('player2')" disabled>Hit</button>
+              <button id="stop2" onclick="stop('player2')" disabled>Stop</button>
+            </div>
+            
+          </div>
+
+      	</div>
+    	</div>
+			
+      <div class="d-flex justify-content-center mt-5">
+        <button class="btn btn-danger" id='restart' onclick="restartGame()"> RESTART </button>
+      </div>
+      <footer>
+        <p>Credits: <br>Luiz Gustavo Lufiego <br> Leonardo Chappuis</p>
+      </footer>
+
+      
+		</section>
+
+  <script src="script.js"></script>   
+  </body>
+</html>
